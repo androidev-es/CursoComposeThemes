@@ -14,12 +14,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import es.androidev.cursocomposethemes.ui.theme.CursoComposeThemesTheme
 
 
 @Composable
-fun ScreenNew() {
+fun ScreenNews() {
 
-    Scaffold(topBar = { AppBar() }) {
+    Scaffold(
+        topBar = {
+            AppBar()
+        }
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -56,12 +61,12 @@ fun ScreenNew() {
             )
 
 
-
         }
     }
 
 
 }
+
 @Composable
 private fun AppBar() {
     TopAppBar(
@@ -75,5 +80,7 @@ private fun AppBar() {
 @Preview
 @Composable
 private fun previewScreen() {
-    ScreenNew()
+    CursoComposeThemesTheme {
+        ScreenNews()
+    }
 }
